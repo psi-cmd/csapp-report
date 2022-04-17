@@ -215,7 +215,7 @@ void block_trans_8x8(int M, int N, int *A, int *B, int diag){
    1. 两个质数，显然这种不规整的情况会导致缓存冲突图在矩阵上犬牙交错，不可能向上面分析得那么规则。最简单的解法可能就是暴力尝试分块，从 2 尝试到 51 ，最终可以得到一个最小值 1950，在块大小为 17x17 时取到。
 
       ```c
-   void block_trans_nxn(int m, int n, int M, int N, int *A, int *B)
+      void block_trans_nxn(int m, int n, int M, int N, int *A, int *B)
       {
           for (int i = 0; i < n; i++)
               for (int j = 0; j < m; j++)
